@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <h1>To Do List</h1>
+    <input type="text" id="taskInput" placeholder="Enter a new task">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+    <script>
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const taskList = document.getElementById('taskList');
+             //tickbtn.textContent = '✔';
+            // tickbtn.className = 'tick-btn';
+            // tickbtn.addeventListener('click', () => {
+                 //span.classlist.toggle('completed');
+            // });
+            if (taskInput.value.trim() !== '') {
+                const listItem = document.createElement('li');
+                listItem.textContent = taskInput.value;
+                taskList.appendChild(listItem);
+                taskInput.value = '';
+            } else {
+                alert('Please enter a task.');
+                return;
+            }
+        }
+    </script>
+
+</body>
+</html>
