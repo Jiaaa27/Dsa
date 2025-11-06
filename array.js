@@ -8,7 +8,7 @@ function renderTable() {
   studentsBody.innerHTML = "";
   for (let i = 0; i < students.length; i++) {
     const row = document.createElement("tr");
-    const cell1 = document.createElement("td");
+    const cell1 = document.createElement("td"); 
     const cell2 = document.createElement("td");
     cell1.textContent = students[i];
     cell2.textContent = marks[i];
