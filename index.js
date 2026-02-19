@@ -9,4 +9,7 @@ fs.readFile("./a.txt","utf-8",(err,result) => {
     } 
 });*/
 //fs.cpSync("./a.txt","./.txt");
-fs.unlinkSync("./a.txt");
+//fs.unlinkSync("./a.txt");
+const os=require('os');
+console.log("platform",os.platform());
+console.log("userinfo,",os.userInfo());
